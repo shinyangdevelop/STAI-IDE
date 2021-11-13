@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-		<TextBlock FontSize="24" x:Name="textBlock"></TextBlock>
-    </Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.1*"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Button x:Name="button_save" FontSize="32" Click="button_save_Click">Save</Button>
+		<TextBox Grid.Row="1" FontSize="24" x:Name="textbox_main"></TextBox>
+	</Grid>
 </Window>

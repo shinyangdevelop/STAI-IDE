@@ -28,7 +28,17 @@ namespace STAI_IDE
 
 			String value = System.IO.File.ReadAllText(path);
 
-			textBlock.Text = value;
+			textbox_main.Text = value;
+		}
+
+		private void save(String path, String value)
+		{
+			System.IO.File.WriteAllText(path, value);
+		}
+
+		private void button_save_Click(object sender, RoutedEventArgs e)
+		{
+			save(path, textbox_main.Text);
 		}
 	}
 }
