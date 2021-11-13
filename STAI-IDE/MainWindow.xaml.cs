@@ -20,9 +20,15 @@ namespace STAI_IDE
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		String path = "C:/users/user/desktop/coding/ide/STAI-IDE/test.txt";
+
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			String value = System.IO.File.ReadAllText(path);
+
+			textBlock.Text = value;
 		}
 	}
 }
